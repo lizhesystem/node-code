@@ -1,7 +1,7 @@
 let fs = require('fs');
 
 // 创建写入流
-var writeStream = fs.createWriteStream('hello.txt', {flags: 'w'});
+let writeStream = fs.createWriteStream('hello.txt', {flags: 'w'});
 
 // 监听文件打开和准备就绪
 writeStream.on('open', () => {

@@ -1,6 +1,6 @@
-var events = require('events');
-var ee = new events.EventEmitter();
-var fs = require('fs');
+let events = require('events');
+let ee = new events.EventEmitter();
+let fs = require('fs');
 
 // 监听事件 回调后可以来执行 传入data参数
 ee.on('helloSuccess', function (data) {
@@ -18,7 +18,7 @@ ee.on('helloSuccess', function () {
 });
 
 
-// fs.readFile('text.md', (err, data) => {
+// fs.readFile('README.md', (err, data) => {
 //   if (err) return console.error(err);
 //   console.log(data.toString()); // 打印第一遍
 //   ee.emit('helloSuccess', data)  // 使用emit触发 这样就不用在回调函数里写一堆东西了
@@ -36,14 +36,14 @@ function readPromise(path) {
 }
 
 // 异步调用
-// readPromise('./text.md').then((data) => {
+// readPromise('./README.md').then((data) => {
 //   ee.emit('helloSuccess', data)
 // });
 
 // 使用async + await 来执行
 async function run() {
   try {
-    const data = await readPromise('./text.md');
+    const data = await readPromise('./README.md');
     ee.emit('helloSuccess', data)
   } catch (err) {
     console.log(err)
