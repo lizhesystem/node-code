@@ -1,6 +1,6 @@
 let axios = require('axios');
 
-axios.get('https://www.1905.com/vod/list/n_1_t_1/o3p1.html').then((res) => {
+axios.get('http://www.gov.cn/xinwen/yaowen.htm').then((res) => {
   console.log(res)
 });
 

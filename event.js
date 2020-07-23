@@ -36,9 +36,9 @@ function readPromise(path) {
 }
 
 // 异步调用
-// readPromise('./README.md').then((data) => {
-//   ee.emit('helloSuccess', data)
-// });
+readPromise('./README.md').then((data) => {
+  ee.emit('helloSuccess', data)
+});
 
 // 使用async + await 来执行
 async function run() {
